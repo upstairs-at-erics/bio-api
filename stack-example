@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  web:
+    image: bio-api:latest
+    container_name: bio_api_prod
+    pull_policy: never  
+    volumes:
+      - /opt/docker-builds/bio-api:/app
+    environment:
+      - DJANGO_SECRET_KEY=
+      - DJANGO_DEBUG=False
+      # ADD api.greenwood-uk.com to your allowed hosts!
+      - DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1,<TAILNET NODE>.ts.net,<PUBLIC DOMAIN>
+      - DB_NAME=
+      - DB_USER=
+      - DB_PASSWORD=
+      - DB_HOST=
+      - DB_PORT=
+      - PYTHONUNBUFFERED=1
+    networks:
+      - traefik-public
+    labels:
+      - "traefik.enable=true"
+      # The domain you want to use
+      - "traefik.http.routers.bio-api.rule=Host(`YOUR PUBLIC DOMMAIN OR SUBDOMAIN`)"
+      - "traefik.http.routers.bio-api.entrypoints=websecure"
+      - "traefik.http.routers.bio-api.tls.certresolver=le"
+      # Tell Traefik which port Gunicorn is listening on inside the container
+      - "traefik.http.services.bio-api.loadbalancer.server.port=8000"
+    restart: always
+
+networks:
+  traefik-public:
+    external: true
