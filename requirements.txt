@@ -1,0 +1,9 @@
+asgiref==3.11.0
+Django==5.1.15
+djangorestframework==3.16.1
+PyMySQL
+python-dotenv==1.2.1
+sqlparse==0.5.5
+gunicorn
+whitenoise
+django-cors-headers
