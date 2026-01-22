@@ -6,6 +6,8 @@ __pycache__/
 *.so
 *.egg-info/
 
+sync.sh
+
 # Environment variables
 .env
 
