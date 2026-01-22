@@ -19,7 +19,7 @@ venv/
 db.sqlite3
 
 # Docker
-.dockerignore
+#.dockerignore
 
 # Git
 .git/
