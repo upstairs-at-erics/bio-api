@@ -35,6 +35,7 @@ DynoBIO is a simple RESTful API built with **Django** and **Django REST Framewor
 ## Example - Using API in static profile page
 By fetching the data from the API in a static html page, using JavaScript, the page can be updated dynamically from the Admin panel of this service.  
 An example...
+![website](https://github.com/user-attachments/assets/5a32433d-f485-4130-ada7-c63da83629f8)
 
 ## Installation & Setup (Docker)
 ### 1. Build Image in Docker
