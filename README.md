@@ -1,6 +1,6 @@
 # DynoBIO - Dynamic Profile Biography API
 
-DynoBIO is a simple RESTful API built with **Django** and **Django REST Framework (DRF)**. It serves as a centralized management system to maintain and serve dynamic profile and biographical data, allowing for dynamic updates to portfolio data, career history, and technical skills.
+A simple RESTful API built with **Django** and **Django REST Framework (DRF)**. It serves as a centralized management system to maintain and serve dynamic profile and biographical data, allowing for dynamic updates to portfolio data, career history, and technical skills.
 
 ## Key Features
 
